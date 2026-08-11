@@ -1,0 +1,8 @@
+# Example workload knobs for local mock runs (not GPU experiments).
+mix: mixed
+interactive_fraction: 0.8
+rate_rps: 4.0
+duration_s: 30
+model: mock-model
+slo_s: 0.5
+seed: 42

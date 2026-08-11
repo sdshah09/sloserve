@@ -33,7 +33,7 @@ Hypothesis (numbers are targets, not claims):
 | 5 | Ablations (A/B/C) | Blocked on Week 4 |
 | 6 | Final benchmarks + write-up | Blocked on Week 5 |
 
-**Right now:** build only the streaming benchmark client and harness. See [SKILLS.md](SKILLS.md) → Week 1.
+**Right now:** Week 1 harness exists. Next is Week 2 GPU baseline after the harness is validated. See [SKILLS.md](SKILLS.md).
 
 ## Fixed experimental setup
 

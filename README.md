@@ -24,4 +24,31 @@ The work compares against what vLLM already provides (FCFS, priority scheduling,
 
 ## Status
 
-Early stage: building a reproducible mixed-workload streaming benchmark harness before any custom scheduler work.
+Week 1 harness is in place: streaming client, mixed workloads, metrics, and a mock server. No GPU required yet.
+
+## Quick start (no GPU)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+
+# terminal 1
+python -m mocks.streaming_server --port 8000
+
+# terminal 2
+python -m harness.run \
+  --base-url http://127.0.0.1:8000 \
+  --mix mixed \
+  --rate 4 \
+  --num-requests 20 \
+  --quick \
+  --out results/local.jsonl \
+  --plot results/local_latency_cdf.png
+```
+
+This writes raw per-request JSONL (class, arrival, first-token, every token time, completion), a summary JSON, and a latency CDF plot.
+
+```bash
+pytest
+```

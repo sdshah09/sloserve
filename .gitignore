@@ -10,7 +10,8 @@ venv/
 .ruff_cache/
 
 # Results / local artifacts
-results/
+results/*
+!results/.gitkeep
 *.jsonl
 !fixtures/**/*.jsonl
 
