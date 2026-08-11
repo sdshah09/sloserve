@@ -1,0 +1,25 @@
+---
+description: SLOServe project constraints, phase gates, and anti-scope-creep rules for all agents
+alwaysApply: true
+---
+
+# SLOServe
+
+Before coding, read `AGENTS.md` and the matching skill in `SKILLS.md`.
+
+## Non-negotiables
+
+- Current phase is Week 1 until harness + mock server deliverable exists.
+- No custom scheduler until Gate 1 (interference proven).
+- No gateway, K8s, Grafana, or CUDA until interference graph exists.
+- No GPU rental until Week 1 works offline.
+- Compare vs FCFS, priority, and chunked prefill — not naive FCFS alone.
+- One experimental variable at a time (Week 5).
+
+## Week 1 focus
+
+Streaming client that records: request class, arrival, first token, every token time, completion. Workloads + metrics + mock server. One command → metrics file without GPU.
+
+## If asked to jump ahead
+
+State the active week, the gate that blocks later work, and do only the current deliverable.
